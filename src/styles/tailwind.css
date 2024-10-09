@@ -30,6 +30,11 @@ h2 {
   font-weight: 600;
 }
 
+body {
+  background-color: var(--accent-color-200);
+  cursor: url("i.svg"), auto;
+}
+
 /* .outfit-titel {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
