@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import Titel from "../components/Titel.astro";
 import Projekter from "../components/Projekter.astro";
+import Info from "../components/Info.astro";
 ---
 <MainLayout title="Titel">
 	
@@ -13,7 +14,7 @@ import Projekter from "../components/Projekter.astro";
 		<Titel></Titel>
 	</section>
 
-	<section class="bg-[var(--secondary-color-100)] w-full lg:w-full mt-24 lg:mt-32  p-2 lg:p-4 grid lg:grid-cols-2 ml-2 mr-4 lg:ml-[80px] section2">
+	<section id="ommig" class="bg-[var(--secondary-color-100)] w-full lg:w-full mt-24 lg:mt-32  p-2 lg:p-4 grid lg:grid-cols-2 ml-2 mr-4 lg:ml-[80px] section2">
 		<div class="m-4 mx-4 flex flex-col gap-4 p-2 ">
 			<h3 class="text-base lg:text-[27px]">Mit navn er Laura Backe</h3>
 			<p class="text-[16px] lg:text[24px]">Jeg er en <mark>multimediedesignstuderende</mark> på KEA og selvudnævnt digital designer, med øje for lækre farvekombinationer og en forkærlighed for sjove grafiske motiver. Mine ambitioner er tit (for) høje og jeg prioriterer altid et <mark>unikt design</mark> som kan bære sig selv.
@@ -38,7 +39,58 @@ import Projekter from "../components/Projekter.astro";
 		</div>
 	</section>
 
-	<section>
+	<section id="projekter" class="section4">
 		<Projekter></Projekter>
 	</section>
+
+	<section id="leder" class="mt-[400px]  section5">
+		<div class="lg:grid lg:grid-cols-2  mx-2 bg-[var(--accent-color-100)] sm:mx-auto h-full w-[400px] lg:w-[1000px] rounded-[60px] shadow p-10">
+			<div class="flex flex-col gap-2">
+				<h2 class="text-[var(--accent-color-200)] mb-[10px] text-[32px] lg:text[64px]">jeg leder efter...</h2>
+				<p>En arbejdsplads som kan udfordre og guide mig. Jeg er spændt på at prøve mine kræfter af og bruge de værktøjer jeg har lært på KEA i rigtigt arbejdsmiljø. </p>
+				<p>Jeg vil rigtig gerne prøve arbejdsopgaver af, vedrørende digitalt design, om det er i figma, illustrator eller et tredje program som I mener jeg skal lære - jeg er klar på hvad end, I har at byde!</p>
+			</div>
+			<div id="kontakt" class="ml-8">
+				<Info></Info>
+			</div>
+		
+		</div>
+
+	</section>
 </MainLayout>
+
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".section1");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement1 = document.querySelector(".section2");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+		
+		const inviewelement2 = document.querySelector(".section3");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".section4");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement4 = document.querySelector(".section5");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+</script>
