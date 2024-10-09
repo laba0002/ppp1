@@ -4,12 +4,41 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Titel from "../components/Titel.astro";
+import Projekter from "../components/Projekter.astro";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+	
+	<section>
+		<Titel></Titel>
+	</section>
+
+	<section class="bg-[var(--secondary-color-100)] w-full lg:w-full mt-24 lg:mt-32  p-2 lg:p-4 grid lg:grid-cols-2 ml-2 mr-4 lg:ml-[80px] section2">
+		<div class="m-4 mx-4 flex flex-col gap-4 p-2 ">
+			<h3 class="text-base lg:text-[27px]">Mit navn er Laura Backe</h3>
+			<p class="text-[16px] lg:text[24px]">Jeg er en <mark>multimediedesignstuderende</mark> på KEA og selvudnævnt digital designer, med øje for lækre farvekombinationer og en forkærlighed for sjove grafiske motiver. Mine ambitioner er tit (for) høje og jeg prioriterer altid et <mark>unikt design</mark> som kan bære sig selv.
+			</p>
+			<p class="text-[16px] lg:text[24px]">
+				Jeg arbejder pt som <mark>butiks-, produktion- og digital medarbejder</mark> hos SCHERNING København, hvor jeg har bla ansvarsområder indenfor deres Shopify samt photoshopper produktsbilleder til webshoppen og SoMe.</p>
+		</div>
+	</section>
+
+	<section id="skills" class=" mt-[50px] lg:grid lg:grid-cols-2  lg:mt-[135px] lg:mb-[80px] lg:ml-[80px] z-[50] section3">
+		<div class="lg:w-[690px]  mx-2 p-2 w-[500px] mt-[30px] flex flex-col gap-4 z-10">
+			<h2 class=" text-[var(--accent-color-100)] text-[32px] lg:text[64px]">mine skills</h2>
+			<p class="text-[16px] lg:text[24px]">Under min uddannelse har jeg lært samtlige teknikker, som jeg bruger i mine projekter. Før jeg starter et projekt laver jeg en research, hvor jeg går ind og kigger på både brugerne af løsningen men også de trends og UI patterns som andre løsninger bruger sig af, til enten inspiration eller se hvordan man kan skille sig ud.
+			</p>
+			<h4>det kreative</h4>
+			<p class="text-[16px] lg:text[24px]">Jeg arbejder med grafisk design ved hjælp af værktøjer som Adobe Illustrator og Photoshop. Her skaber jeg visuelle elementer, logoer og ikoner, som integreres i de digitale løsninger og bidrager til en stærk visuel identitet. 
+			</p>
+			<h4>det praktiske</h4>
+			<p class="text-[16px] lg:text[24px]">I mine processer skaber jeg interaktive og levende figma prototyper, som jeg så koder ud fra i vscode. Ud over HTML, CSS, og lidt JavaScript, benytter jeg mig af  tailwind, astro, animate.css og alpine.
+			</p>
+			<p class="text-[16px] lg:text[24px]">For mig er det spændende og tilfredsstillende, at være involveret i et projekt fra idé til færdig løsning.</p>
+		</div>
+	</section>
+
+	<section>
+		<Projekter></Projekter>
+	</section>
 </MainLayout>

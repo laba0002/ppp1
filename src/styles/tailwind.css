@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-
+@layer base {
 }
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://use.typekit.net/gys7fqa.css");
+
+:root {
+  --primary-color-100: #e7ecd0;
+
+  --secondary-color-100: #fff9f0;
+  --secondary-color-200: #3a3535;
+
+  --accent-color-100: #c0c82f;
+  --accent-color-200: #f5185f;
+}
+
+.background {
+  background-color: var(--primary-color-100);
+  font-family: "Outfit", sans-serif;
+}
+mark {
+  background-color: transparent;
+  color: var(--accent-color-200);
+}
+h2 {
+  font-weight: 600;
+}
+
+/* .outfit-titel {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.outfit-p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.outfit-light {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.outfit-bold {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+} */
