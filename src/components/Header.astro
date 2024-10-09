@@ -1,51 +1,49 @@
----
----
 <div>
-    <div x-data="{ showmenu: false }" class=" fixed top-0 right-0 w-full z-50" >
-        <div id="navbar" class="  justify-between lg:justify-around items-center">
-            <nav id="desktopmenu" class="hidden lg:block items-center text-stone-950 p-0 ml-auto sticky">
-                <div class="container flex flex-col">
-                  <ul class="flex flex-col items-end text-[30px]">
-                    <li class="relative flex-1 text-center">
-                      <a href="/" class="block py-6 2 transition-all hover:line-through hover:text-[var(--secondary-color-100)]">om mig</a>
-                    </li>
-                    <li class="relative flex-1 text-center">
-                      <a href="/#skills" class="block py-6  transition-all hover:line-through hover:text-[var(--secondary-color-100)]">mine skills</a>
-                    </li>
-                    <li class="relative flex-1 text-center">
-                      <a href="/#projekter" class="block py-6  transition-all hover:line-through hover:text-[var(--secondary-color-100)]">tidligere projekter</a>
-                    </li>
-                    <li class="relative flex-1 text-center">
-                      <a href="/#leder" class="block py-6  transition-all hover:line-through hover:text-[var(--secondary-color-100)]">jeg leder efter..</a>
-                    </li>
-                    <li class="relative flex-1 text-center">
-                      <a href="/#kontakt" class="block py-6  transition-all hover:line-through bold text-[var(--accent-color-200)] hover:text-[var(--secondary-color-100)]">kontakt</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              
+    <div x-data="{ showmenu: false }" class="fixed top-0 right-0 w-full z-50">
+      <div id="navbar" class="justify-between lg:justify-around items-center">
+        <!-- Desktop Navigation -->
+        <nav id="desktopmenu" class="hidden lg:flex lg:flex-col lg:items-end lg:fixed lg:right-0 lg:top-0 lg:w-[300px] lg:h-full p-4 text-stone-950">
+          <ul class="flex flex-col items-end text-[30px]">
+            <li class="relative flex-1 text-center">
+              <a href="/" class="block py-6 transition-all hover:line-through hover:text-[var(--secondary-color-100)]">Om mig</a>
+            </li>
+            <li class="relative flex-1 text-center">
+              <a href="/#skills" class="block py-6 transition-all hover:line-through hover:text-[var(--secondary-color-100)]">Mine skills</a>
+            </li>
+            <li class="relative flex-1 text-center">
+              <a href="/#projekter" class="block py-6 transition-all hover:line-through hover:text-[var(--secondary-color-100)]">Tidligere projekter</a>
+            </li>
+            <li class="relative flex-1 text-center">
+              <a href="/#leder" class="block py-6 transition-all hover:line-through hover:text-[var(--secondary-color-100)]">Jeg leder efter..</a>
+            </li>
+            <li class="relative flex-1 text-center">
+              <a href="/#kontakt" class="block py-6 transition-all font-bold text-[var(--accent-color-200)] hover:text-[var(--secondary-color-100)]">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <!-- Mobile Navigation Toggle -->
         <div class="flex justify-between items-center">
-            <button id="burgermenu" class="lg:hidden text-[var(--secondary-color-200)] self-center pt-3 pr-3 z-50 ml-auto" 
-                    x-on:click="showmenu = ! showmenu">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
-          
-      
-      <nav id="mobilmenu" class="flex flex-col flex-end pt-4" 
-      x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <ul class="text-[var(--secondary-color-200)]" >
-        <a href="/"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">om mig</li></a>
-        <a href="/#skills"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">mine skills</li></a>
-        <a href="/#projekter"><li class="text-center py-2  background focus:text-[var(--secondary-color-100)]">tidligere projekter</li></a>
-        <a href="/#leder"><li class="text-center py-2  background focus:text-[var(--secondary-color-100)]">jeg leder efter..</li></a>
-        <a href="/#kontakt"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">kontakt</li></a>
-      </ul>
-      </nav>
+          <button id="burgermenu" class="lg:hidden text-[var(--secondary-color-200)] self-center pt-3 pr-3 z-50 ml-auto" 
+                  x-on:click="showmenu = ! showmenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobilmenu" class="flex flex-col flex-end pt-4" 
+          x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+          <ul class="text-[var(--secondary-color-200)]">
+            <a href="/"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">Om mig</li></a>
+            <a href="/#skills"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">Mine skills</li></a>
+            <a href="/#projekter"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">Tidligere projekter</li></a>
+            <a href="/#leder"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">Jeg leder efter..</li></a>
+            <a href="/#kontakt"><li class="text-center py-2 background focus:text-[var(--secondary-color-100)]">Kontakt</li></a>
+          </ul>
+        </nav>
       </div>
-
-</div>
-
+    </div>
+  </div>
+  
