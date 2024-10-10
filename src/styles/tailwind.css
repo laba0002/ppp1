@@ -34,11 +34,6 @@ section h4 {
 }
 
 body {
-  background-color: var(--accent-color-200);
-  cursor: url("i.svg"), auto;
-}
-
-body {
   cursor: url("/public/i.svg"), auto;
 }
 
