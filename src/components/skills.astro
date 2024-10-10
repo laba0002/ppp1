@@ -9,9 +9,10 @@ import starFill from "../assets/images/starFill.svg"
 import NoStar from "../assets/images/NoFill.svg"
 ---
 
-<div class=" mt-10 lg:mt-8 ml-4 lg:ml-7  flex flex-col lg:flex-row gap-[40px]">
+<div class="bounce mt-10 lg:mt-8 ml-4 lg:ml-7 flex flex-col lg:flex-row gap-[40px]">
+
      <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">       
-         <Image class=" h-full w-[50px] lg:w-[100px]"  src={figma} alt="figma ikon"/>
+         <Image class=" h-full w-[50px]  lg:w-[100px]"  src={figma} alt="figma ikon"/>
          <Image class="pc-hide w-[50px] spin" src={starFill} alt="star "/>
          <Image class="pc-hide w-[50px] spin1" src={starFill} alt="star "/>
          <Image class="pc-hide w-[50px] spin2" src={starFill} alt="star "/>
@@ -22,7 +23,7 @@ import NoStar from "../assets/images/NoFill.svg"
   
     
        <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105"> 
-        <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator ikon"/>
+        <Image class="h-full w-[50px] lg:w-[100px]  transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator ikon"/>
         <Image class="pc-hide w-[50px] spin5" src={starFill} alt="star "/>
         <Image class="pc-hide w-[50px] spin6" src={starFill} alt="star "/>
         <Image class="pc-hide w-[50px] spin7" src={starFill} alt="star "/>
@@ -32,7 +33,7 @@ import NoStar from "../assets/images/NoFill.svg"
        
 
 <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
-            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop ikon"/>
+            <Image class="h-full w-[50px] lg:w-[100px]  transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop ikon"/>
             <Image class="pc-hide w-[50px] spin10" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin11" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin12" src={starFill} alt="star "/>
@@ -41,7 +42,7 @@ import NoStar from "../assets/images/NoFill.svg"
     
 </div> 
 <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
-            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode ikon"/>
+            <Image class="h-full w-[50px] lg:w-[100px]  transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode ikon"/>
             <Image class="pc-hide w-[50px] spin15" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin16" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin17" src={starFill} alt="star "/>
@@ -51,7 +52,7 @@ import NoStar from "../assets/images/NoFill.svg"
 </div>  
 
 <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
-            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro ikon"/>
+            <Image class="h-full w-[50px] lg:w-[100px]  transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro ikon"/>
             <Image class="pc-hide w-[50px] spin20" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin21" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin22" src={starFill} alt="star "/>
@@ -198,7 +199,42 @@ import NoStar from "../assets/images/NoFill.svg"
 		inviewelement24 , () => {
 			inviewelement24.classList.add("rotate-center", "animate__delay-2s")
 		})
+        const bounceElements = document.querySelectorAll(".bounce");
+bounceElements.forEach(element => {
+  inView(
+    element, () => {
+      element.classList.add("bounce-bottom", "animate__delay-2s");
+    }
+  );
+});
 
+
+    //     const inviewelement25 = document.querySelector(".bounce");
+	// inView(
+	// 	inviewelement25 , () => {
+	// 		inviewelement25.classList.add("bounce-bottom", "animate__delay-2s")
+	// 	})
+
+    //     const inviewelement26 = document.querySelector(".bounce1");
+	// inView(
+	// 	inviewelement26 , () => {
+	// 		inviewelement26.classList.add("bounce-bottom", "animate__delay-1s")
+	// 	})
+    //     const inviewelement27 = document.querySelector(".bounce2");
+	// inView(
+	// 	inviewelement27 , () => {
+	// 		inviewelement27.classList.add("bounce-bottom", "animate__delay-1s")
+	// 	})
+    //     const inviewelement28 = document.querySelector(".bounce3");
+	// inView(
+	// 	inviewelement28 , () => {
+	// 		inviewelement28.classList.add("bounce-bottom", "animate__delay-1s")
+	// 	})
+    //     const inviewelement29 = document.querySelector(".bounce4");
+	// inView(
+	// 	inviewelement29 , () => {
+	// 		inviewelement29.classList.add("bounce-bottom", "animate__delay-1s")
+	// 	})
         
 </script>
 
@@ -237,6 +273,128 @@ import NoStar from "../assets/images/NoFill.svg"
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+.bounce-bottom {
+	-webkit-animation: bounce-bottom 0.9s both;
+	        animation: bounce-bottom 0.9s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-10-10 14:35:51
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes bounce-bottom {
+  0% {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(24px);
+            transform: translateY(24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-bottom {
+  0% {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(24px);
+            transform: translateY(24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
   }
 }
 
