@@ -5,26 +5,243 @@ import illustrator from "../assets/images/illustrator.svg"
 import photoshop from "../assets/images/photoshop.svg"
 import premiere from "../assets/images/premiere.svg"
 import vscode from "../assets/images/vscode.svg"
-import starFill from "../assets/images/star.svg"
-import NoStar from "../assets/images/nostar.svg"
+import starFill from "../assets/images/starFill.svg"
+import NoStar from "../assets/images/NoFill.svg"
 ---
 
-<div class=" mt-10 lg:ml-12 lg:mt-28 flex flex-row gap-[30px] w-[300px]">
-    
-        <Image class=" w-[300px] transition-all ease-in-out hover:scale-105"  src={figma} alt="figma ikon"/>
+<div class=" mt-10 lg:mt-8 ml-4 lg:ml-7  flex flex-col lg:flex-row gap-[40px]">
+     <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">       
+         <Image class=" h-full w-[50px] lg:w-[100px]"  src={figma} alt="figma ikon"/>
+         <Image class="pc-hide w-[50px] spin" src={starFill} alt="star "/>
+         <Image class="pc-hide w-[50px] spin1" src={starFill} alt="star "/>
+         <Image class="pc-hide w-[50px] spin2" src={starFill} alt="star "/>
+         <Image class="pc-hide w-[50px] spin3" src={starFill} alt="star "/>
+         <Image class="pc-hide w-[50px] spin4" src={NoStar} alt="star not "/>
+    </div>
 
   
     
-        <Image class=" w-[300px] transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator ikon"/>
+       <div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105"> 
+        <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator ikon"/>
+        <Image class="pc-hide w-[50px] spin5" src={starFill} alt="star "/>
+        <Image class="pc-hide w-[50px] spin6" src={starFill} alt="star "/>
+        <Image class="pc-hide w-[50px] spin7" src={starFill} alt="star "/>
+        <Image class="pc-hide w-[50px] spin8" src={starFill} alt="star "/>
+        <Image class="pc-hide w-[50px] spin9" src={NoStar} alt="star not "/>
+    </div>
        
 
-        <Image class=" w-[300px] transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop ikon"/>
- 
-        <Image class=" w-[300px] transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode ikon"/>
-  
+<div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
+            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop ikon"/>
+            <Image class="pc-hide w-[50px] spin10" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin11" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin12" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin13" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin14" src={NoStar} alt="star not "/>
+    
+</div> 
+<div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
+            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode ikon"/>
+            <Image class="pc-hide w-[50px] spin15" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin16" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin17" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin18" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin19" src={NoStar} alt="star not "/>
+    
+</div>  
 
-        <Image class=" w-[300px] transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro ikon"/>
-
+<div class="flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105">
+            <Image class="h-full w-[50px] lg:w-[100px] transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro ikon"/>
+            <Image class="pc-hide w-[50px] spin20" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin21" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin22" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin23" src={starFill} alt="star "/>
+            <Image class="pc-hide w-[50px] spin24" src={NoStar} alt="star not "/>
+    
+</div>
         
 </div>
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".spin");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement1 = document.querySelector(".spin1");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement2 = document.querySelector(".spin2");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement3 = document.querySelector(".spin3");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement4 = document.querySelector(".spin4");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement5 = document.querySelector(".spin5");
+	inView(
+		inviewelement5 , () => {
+			inviewelement5.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement6 = document.querySelector(".spin6");
+	inView(
+		inviewelement6 , () => {
+			inviewelement6.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement7 = document.querySelector(".spin7");
+	inView(
+		inviewelement7 , () => {
+			inviewelement7.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement8 = document.querySelector(".spin8");
+	inView(
+		inviewelement8 , () => {
+			inviewelement8.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement9 = document.querySelector(".spin9");
+	inView(
+		inviewelement9 , () => {
+			inviewelement9.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement10 = document.querySelector(".spin10");
+	inView(
+		inviewelement10 , () => {
+			inviewelement10.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement11 = document.querySelector(".spin11");
+	inView(
+		inviewelement11 , () => {
+			inviewelement11.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement12 = document.querySelector(".spin12");
+	inView(
+		inviewelement12 , () => {
+			inviewelement12.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement13 = document.querySelector(".spin13");
+	inView(
+		inviewelement13 , () => {
+			inviewelement13.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement14 = document.querySelector(".spin14");
+	inView(
+		inviewelement14 , () => {
+			inviewelement14.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement15 = document.querySelector(".spin15");
+	inView(
+		inviewelement15 , () => {
+			inviewelement15.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        const inviewelement16 = document.querySelector(".spin16");
+	inView(
+		inviewelement16 , () => {
+			inviewelement16.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement17 = document.querySelector(".spin17");
+	inView(
+		inviewelement17 , () => {
+			inviewelement17.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement18 = document.querySelector(".spin18");
+	inView(
+		inviewelement18 , () => {
+			inviewelement18.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement19 = document.querySelector(".spin19");
+	inView(
+		inviewelement19 , () => {
+			inviewelement19.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement20 = document.querySelector(".spin20");
+	inView(
+		inviewelement20 , () => {
+			inviewelement20.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement21 = document.querySelector(".spin21");
+	inView(
+		inviewelement21 , () => {
+			inviewelement21.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement22 = document.querySelector(".spin22");
+	inView(
+		inviewelement22 , () => {
+			inviewelement22.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement23 = document.querySelector(".spin23");
+	inView(
+		inviewelement23 , () => {
+			inviewelement23.classList.add("rotate-center", "animate__delay-2s")
+		})
+        const inviewelement24 = document.querySelector(".spin24");
+	inView(
+		inviewelement24 , () => {
+			inviewelement24.classList.add("rotate-center", "animate__delay-2s")
+		})
+
+        
+</script>
+
+<style>
+.rotate-center {
+	-webkit-animation: rotate-center 1s linear 2s forwards;
+	        animation: rotate-center 1s linear 2s forwards;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-10-10 14:16:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+</style>
+
+
 
