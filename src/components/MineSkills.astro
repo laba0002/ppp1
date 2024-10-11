@@ -64,6 +64,7 @@ import NoStar from "../assets/images/NoFill.svg"
 </div>
 
 <script>
+    	import { inView } from "motion";
     document.querySelectorAll('.spin').forEach((el) => {
         inView(el, () => {
             el.classList.add('rotate-center', 'animate__delay-2s');
