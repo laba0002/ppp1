@@ -8,6 +8,7 @@ import Titel from "../components/Titel.astro";
 import Projekter from "../components/Projekter.astro";
 import Info from "../components/Info.astro";
 import MineSkills from "../components/MineSkills.astro";
+import portrait from "../assets/images/portrait.png";
 ---
 <MainLayout title="Titel">
 	
@@ -15,13 +16,16 @@ import MineSkills from "../components/MineSkills.astro";
 		<Titel></Titel>
 	</section>
 
-	<section id="ommig" class="bg-[var(--secondary-color-100)] shadow rounded-lg w-[400px] lg:w-[1000px] mt-24 lg:mt-32  p-2 lg:p-4 grid lg:grid-cols-2 mx-2 mr-4 lg:ml-[80px] section2">
-		<div class="m-4 mx-4 flex flex-col gap-4 p-2 ">
-			<h3 class="text-base lg:text-[27px]">Mit navn er Laura Backe</h3>
+	<section id="ommig" class="bg-[var(--secondary-color-100)] shadow rounded-[40px] w-[400px] lg:w-[1000px] mt-24 lg:mt-32   grid lg:grid-cols-2 mx-2 mr-4 lg:ml-[80px] section2">
+		<div class="m-4 mx-4 flex flex-col gap-4 p-2 lg:p-6">
+			<h3 class="text-base lg:text-[27px] pt-2 lg:pt-4">Mit navn er Laura Backe</h3>
 			<p class="text-[16px] lg:text[24px]">Jeg er en <mark>multimediedesignstuderende</mark> på KEA og selvudnævnt digital designer, med øje for lækre farvekombinationer og en forkærlighed for sjove grafiske motiver. Mine ambitioner er tit (for) høje og jeg prioriterer altid et <mark>unikt design</mark> som kan bære sig selv.
 			</p>
 			<p class="text-[16px] lg:text[24px]">
 				Jeg arbejder pt som <mark>butiks-, produktion- og digital medarbejder</mark> hos SCHERNING København, hvor jeg har bla ansvarsområder indenfor deres Shopify samt photoshopper produktsbilleder til webshoppen og SoMe.</p>
+		</div>
+		<div>
+			<Image class="overflow-hidden h-full w-[600px] lg:w-[800px] pt-2 lg:pt-4 px-6" src={portrait} alt="billede af Laura Backe"/>
 		</div>
 	</section>
 
@@ -46,7 +50,7 @@ import MineSkills from "../components/MineSkills.astro";
 	</section>
 
 	<section id="leder" class="mt-[100px] lg:mt-[300px] section5">
-		<div class="lg:grid lg:grid-cols-2 lg:ml-8 mx-4 bg-[var(--accent-color-100)] h-full  lg:w-[1000px] rounded-[60px] shadow  p-10">
+		<div class="lg:grid lg:grid-cols-2 lg:ml-8 mx-4 bg-[var(--accent-color-100)] h-full  lg:w-[1000px] rounded-[40px] shadow  p-10">
 			<div class="flex flex-col gap-2">
 				<h2 class="text-[var(--accent-color-200)] mb-[10px] text-[32px] lg:text-[64px]">jeg leder efter...</h2>
 				<p>En arbejdsplads som kan udfordre og guide mig. Jeg er spændt på at prøve mine kræfter af og bruge de værktøjer jeg har lært på KEA i rigtigt arbejdsmiljø. </p>
