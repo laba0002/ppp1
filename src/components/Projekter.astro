@@ -1,5 +1,9 @@
 ---
-
+import { Image } from 'astro:assets';
+import flid from "../assets/images/flid.webp";
+import itmv from "../assets/images/itmvforside.webp";
+import arkbooks from "../assets/images/ark.webp";
+import digitalskraldedag from "../assets/images/skraldedag.webp";
 ---
 
 <section class=" lg:max-w-[75%] mt-[100px] lg:mt-[200px] mx-4 lg:mx-10 lg:ml-[80px]">
@@ -14,28 +18,29 @@
         
     <div class="uppercase pt-1 lg:grid grid-cols-2 gap-5 w-full mx-auto">
         <div>
-            <a href="https://slowcreate.github.io/vildmad_website/">
+            <a href="https://flid.netlify.app/" target="_blank">
               <div class="relative mt-5 min-w-[300px] min-h-[160px] md:min-h-[220px]">
-                <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Vild mad</h6>
-                <img class="absolute inset-0 object-cover w-full h-full" src="Vildmad.jpg" alt="Vild Mad">
+                <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Flid</h6>
+                <!-- <img class="absolute inset-0 object-cover w-full h-full" src="Vildmad.jpg" alt="Vild Mad"> -->
+                <Image class="absolute inset-0 object-cover w-full h-full" src={flid} alt="flids forside"/>
                 <div class="absolute inset-0 bg-[var(--accent-color-100)] opacity-50 md:opacity-100 md:hover:opacity-50 transition-opacity duration-300"></div>
               </div>
             </a>
           </div>
           <div>
-            <a href="https://superb-pithivier-e239e5.netlify.app/">
+            <a href="https://skraldedag11.netlify.app/" target="_blank">
               <div class="relative mt-5 min-w-[300px] min-h-[160px] md:min-h-[220px]">
-                <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Ark books</h6>
-                <img class="absolute inset-0 object-cover w-full h-full" src="Arkbooks.jpg" alt="Ark Books">
+                <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Digital Skraldedag</h6>
+                <Image class="absolute inset-0 object-cover w-full h-full" src={digitalskraldedag} alt="digital skraldedags forside"/>
                 <div class="absolute inset-0 bg-[var(--accent-color-100)] opacity-50 md:opacity-100 md:hover:opacity-50 transition-opacity duration-300"></div>
               </div>
             </a>
           </div>
     <div>
-      <a href="https://slowcreate.github.io/vildmad_website/">
+      <a href="https://itmv-webfeature-gruppe-8.netlify.app/" target="_blank">
         <div class="relative mt-5 min-w-[300px] min-h-[160px] md:min-h-[220px]">
-          <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Vild mad</h6>
-          <img class="absolute inset-0 object-cover w-full h-full" src="Vildmad.jpg" alt="Vild Mad">
+          <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">I tråd med verden</h6>
+          <Image class="absolute inset-0 object-cover w-full h-full" src={itmv} alt="I tråd med verdens forside"/>
           <div class="absolute inset-0 bg-[var(--accent-color-100)] opacity-50 md:opacity-100 md:hover:opacity-50 transition-opacity duration-300"></div>
         </div>
       </a>
@@ -44,7 +49,7 @@
       <a href="https://superb-pithivier-e239e5.netlify.app/">
         <div class="relative mt-5 min-w-[300px] min-h-[160px] md:min-h-[220px]">
           <h6 class="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">Ark books</h6>
-          <img class="absolute inset-0 object-cover w-full h-full" src="Arkbooks.jpg" alt="Ark Books">
+          <Image class="absolute inset-0 object-cover w-full h-full" src={arkbooks} alt="Ark books forside"/>
           <div class="absolute inset-0 bg-[var(--accent-color-100)] opacity-50 md:opacity-100 md:hover:opacity-50 transition-opacity duration-300"></div>
         </div>
       </a>
