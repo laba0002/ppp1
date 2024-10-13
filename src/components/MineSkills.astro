@@ -1,4 +1,4 @@
----
+<!-- ---
 import { Image } from 'astro:assets';
 import figma from "../assets/images/figma.svg"
 import illustrator from "../assets/images/illustrator.svg"
@@ -63,7 +63,7 @@ import NoStar from "../assets/images/NoFill.svg"
         
 </div>
 
-<!-- <script>
+ <script>
 	import { inView } from "motion";
 
 	const inviewelement = document.querySelector(".spin");
@@ -402,8 +402,8 @@ bounceElements.forEach(element => {
 </style> -->
 
 
-
-<script>
+<!-- 
+ <script>
     import { animate, inView } from "@motionone/dom";
     
     // Animate each star element
@@ -428,4 +428,121 @@ bounceElements.forEach(element => {
     });
     </script>
     
-  
+  -->
+
+  ---
+import { Image } from 'astro:assets';
+import figma from "../assets/images/figma.svg";
+import illustrator from "../assets/images/illustrator.svg";
+import photoshop from "../assets/images/photoshop.svg";
+import premiere from "../assets/images/premiere.svg";
+import vscode from "../assets/images/vscode.svg";
+import starFill from "../assets/images/starFill.svg";
+import NoStar from "../assets/images/NoFill.svg";
+---
+
+<div class="bounce mt-12 lg:mt-8 ml-4 lg:ml-6 flex flex-col md:flex-row gap-[40px] mb-5">
+    <div class="flex flex-row gap-[30px]  lg:transition-all lg:ease-in-out hover:scale-105">       
+        <Image class=" h-full w-[50px]  lg:w-[100px] clickable"  src={figma} alt="figma icon" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={NoStar} alt="no star" />
+    </div>
+
+    <div class="flex flex-row gap-[30px] transition-all ease-in-out hover:scale-105"> 
+        <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator icon" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={NoStar} alt="no star" />
+    </div>
+
+    <div class="flex flex-row gap-[30px] transition-all ease-in-out hover:scale-105">
+        <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop icon" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={NoStar} alt="no star" />
+    </div>
+
+    <div class="flex flex-row gap-[30px] transition-all ease-in-out hover:scale-105">
+        <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode icon" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={NoStar} alt="no star" />
+    </div>
+
+    <div class="flex flex-row gap-[30px] transition-all ease-in-out hover:scale-105">
+        <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro icon" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={starFill} alt="star" />
+        <Image class="pc-hide w-[50px] spin" src={NoStar} alt="no star" />
+    </div>
+</div>
+
+<style>
+    .rotate-center {
+        animation: rotate-center 1s linear forwards;
+    }
+    @keyframes rotate-center {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .bounce-bottom {
+        animation: bounce-bottom 0.9s both;
+    }
+    @keyframes bounce-bottom {
+        0% {
+            transform: translateY(45px);
+            opacity: 0;
+        }
+        24% {
+            opacity: 1;
+        }
+        40% {
+            transform: translateY(24px);
+        }
+        65% {
+            transform: translateY(12px);
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<script>
+    import { animate, inView } from "@motionone/dom";
+
+    // Animate each star element
+    const spinElements = document.querySelectorAll(".spin");
+
+    spinElements.forEach((element, index) => {
+        inView(element, () => {
+            animate(element, { rotate: 360 }, { duration: 1, delay: index * 0.2, easing: "ease-in-out" });
+        });
+    });
+
+    // Bounce effect on parent container
+    const bounceElements = document.querySelectorAll(".bounce");
+
+    bounceElements.forEach((element) => {
+        inView(element, () => {
+            animate(element, { translateY: [45, 0] }, { duration: 0.9, easing: "ease-in-out" });
+        });
+    });
+</script>
