@@ -63,7 +63,7 @@ import NoStar from "../assets/images/NoFill.svg"
         
 </div>
 
-<script>
+<!-- <script>
 	import { inView } from "motion";
 
 	const inviewelement = document.querySelector(".spin");
@@ -236,9 +236,9 @@ bounceElements.forEach(element => {
 	// 		inviewelement29.classList.add("bounce-bottom", "animate__delay-1s")
 	// 	})
         
-</script>
+</script> -->
 
-<style>
+<!-- <style>
 .rotate-center {
 	-webkit-animation: rotate-center 1s linear 2s forwards;
 	        animation: rotate-center 1s linear 2s forwards;
@@ -399,5 +399,44 @@ bounceElements.forEach(element => {
 }
 
 
-</style>
+</style> -->
 
+
+<script>
+    import { animate, inView } from "motion";
+    
+    // Set animations for each spin element when in view
+    const spinElements = document.querySelectorAll(".spin, .spin1, .spin2, .spin3, .spin4");
+    
+    spinElements.forEach((element, index) => {
+      inView(element, () => {
+        animate(element, { rotate: 360 }, { duration: 1, delay: index * 0.5 });
+      });
+    });
+    
+    // Example: Animation for bounce effect
+    const bounceElements = document.querySelectorAll(".bounce");
+    bounceElements.forEach((element) => {
+      inView(element, () => {
+        animate(element, { translateY: [45, 0] }, { duration: 0.9, easing: "ease-in-out", delay: 0.5 });
+      });
+    });
+    </script>
+    
+    <style>
+    /* Optional: Adjust additional styles for positioning, etc. */
+    .clickable {
+      cursor: pointer;
+    }
+    
+    .pc-hide {
+      display: none;
+    }
+    
+    /* Add custom responsive styles */
+    @media (min-width: 1024px) {
+      .pc-hide {
+        display: block;
+      }
+    }
+    </style>
