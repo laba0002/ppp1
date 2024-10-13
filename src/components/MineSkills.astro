@@ -402,23 +402,28 @@ bounceElements.forEach(element => {
 </style> -->
 
 
+
 <script>
-    import { animate, inView } from "motion";
+    import { animate, inView } from "@motionone/dom";
     
-    // Set animations for each spin element when in view
+    // Animate each star element
     const spinElements = document.querySelectorAll(".spin, .spin1, .spin2, .spin3, .spin4");
     
     spinElements.forEach((element, index) => {
+      // Trigger animation when element enters viewport
       inView(element, () => {
-        animate(element, { rotate: 360 }, { duration: 1, delay: index * 0.5 });
+        // Rotation animation using Motion One
+        animate(element, { rotate: 360 }, { duration: 1, delay: index * 0.5, easing: "ease-in-out" });
       });
     });
     
-    // Example: Animation for bounce effect
+    // Bounce effect on parent container
     const bounceElements = document.querySelectorAll(".bounce");
+    
     bounceElements.forEach((element) => {
       inView(element, () => {
-        animate(element, { translateY: [45, 0] }, { duration: 0.9, easing: "ease-in-out", delay: 0.5 });
+        // Bounce animation when in view
+        animate(element, { translateY: [45, 0] }, { duration: 0.9, easing: "ease-in-out" });
       });
     });
     </script>
