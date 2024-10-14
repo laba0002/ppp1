@@ -9,9 +9,9 @@ import starFill from "../assets/images/starFill.svg"
 import NoStar from "../assets/images/NoFill.svg"
 ---
 
-<div class="bounce  mt-12 lg:mt-8 ml-4 lg:ml-6 flex flex-col md:flex-row gap-[40px] mb-5">
+<div class="  mt-12 lg:mt-8 ml-4 lg:ml-6 flex flex-col md:flex-row gap-[40px] mb-5">
 
-     <div class="flex flex-row gap-[30px] lg:bouncing-box  lg:transition-all lg:ease-in-out hover:scale-105">       
+     <div class="bounce1 flex flex-row gap-[30px]   lg:transition-all lg:ease-in-out hover:scale-105">       
          <Image class=" h-full w-[50px]  lg:w-[100px] clickable"  src={figma} alt="figma ikon"/>
          <Image class="pc-hide w-[50px] spin " src={starFill} alt="star "/>
          <Image class="pc-hide w-[50px] spin1" src={starFill} alt="star "/>
@@ -22,7 +22,7 @@ import NoStar from "../assets/images/NoFill.svg"
 
   
     
-       <div class="flex flex-row gap-[30px] lg:bouncing-box  transition-all ease-in-out hover:scale-105"> 
+       <div class=" bounce2 flex flex-row gap-[30px]  transition-all ease-in-out hover:scale-105"> 
         <Image class="h-full w-[50px] lg:w-[100px] clickable  transition-all ease-in-out hover:scale-105" src={illustrator} alt="illustrator ikon"/>
         <Image class="pc-hide w-[50px] spin5" src={starFill} alt="star "/>
         <Image class="pc-hide w-[50px] spin6" src={starFill} alt="star "/>
@@ -32,7 +32,7 @@ import NoStar from "../assets/images/NoFill.svg"
     </div>
        
 
-<div class="flex flex-row gap-[30px] lg:bouncing-box  transition-all ease-in-out hover:scale-105">
+<div class="bounce3 flex flex-row gap-[30px]   transition-all ease-in-out hover:scale-105">
             <Image class="h-full w-[50px] lg:w-[100px] clickable  transition-all ease-in-out hover:scale-105" src={photoshop} alt="photoshop ikon"/>
             <Image class="pc-hide w-[50px] spin10" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin11" src={starFill} alt="star "/>
@@ -41,7 +41,7 @@ import NoStar from "../assets/images/NoFill.svg"
             <Image class="pc-hide w-[50px] spin14" src={NoStar} alt="star not "/>
     
 </div> 
-<div class="flex flex-row gap-[30px] lg:bouncing-box  transition-all ease-in-out hover:scale-105">
+<div class="bounce4 flex flex-row gap-[30px]   transition-all ease-in-out hover:scale-105">
             <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={vscode} alt="vscode ikon"/>
             <Image class="pc-hide w-[50px] spin15" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin16" src={starFill} alt="star "/>
@@ -51,7 +51,7 @@ import NoStar from "../assets/images/NoFill.svg"
     
 </div>  
 
-<div class="flex flex-row gap-[30px] lg:bouncing-box  transition-all ease-in-out hover:scale-105">
+<div class="bounce5 flex flex-row gap-[30px]   transition-all ease-in-out hover:scale-105">
             <Image class="h-full w-[50px] lg:w-[100px] clickable transition-all ease-in-out hover:scale-105" src={premiere} alt="premiere pro ikon"/>
             <Image class="pc-hide w-[50px] spin20" src={starFill} alt="star "/>
             <Image class="pc-hide w-[50px] spin21" src={starFill} alt="star "/>
@@ -242,13 +242,41 @@ import NoStar from "../assets/images/NoFill.svg"
 			inviewelement24.classList.add("animate-animated","animate__rotateIn", "animate__delay-2s")
 		}) 
         const bounceElements = document.querySelectorAll(".bounce");
-bounceElements.forEach(element => {
-  inView(
-    element, () => {
-      element.classList.add("animate-animated", "animate__bounceIn", "animate__delay-2s");
-    }
-  );
-});
+// bounceElements.forEach(element => {
+//   inView(
+//     element, () => {
+//       element.classList.add("animate-animated", "animate__bounceIn", "animate__delay-2s");
+//     }
+//   );
+// });
+
+
+    
+const inviewelement25 = document.querySelector(".bounce1");
+inView(
+inviewelement25 , () => {
+    inviewelement25.classList.add("animate-animated", "animate__bounceIn", "animate__delay-1s")
+})
+const inviewelement26 = document.querySelector(".bounce2");
+inView(
+inviewelement26 , () => {
+    inviewelement26.classList.add("animate-animated", "animate__bounceIn", "animate__delay-2s")
+})
+const inviewelement27 = document.querySelector(".bounce3");
+inView(
+inviewelement27 , () => {
+    inviewelement27.classList.add("animate-animated", "animate__bounceIn", "animate__delay-3s")
+})
+const inviewelement28 = document.querySelector(".bounce4");
+inView(
+inviewelement28 , () => {
+    inviewelement28.classList.add("animate-animated", "animate__bounceIn", "animate__delay-4s")
+})
+const inviewelement29 = document.querySelector(".bounce4");
+inView(
+inviewelement29 , () => {
+    inviewelement29.classList.add("animate-animated", "animate__bounceIn", "animate__delay-5s")
+})
 
 
     //     const inviewelement25 = document.querySelector(".bounce");

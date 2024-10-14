@@ -8,24 +8,51 @@ import I from "../assets/images/Vector-3.svg"
 
 
 <div class="lg:ml-4 mt-8 grid grid-rows-4 gap-[30px] clickable">
-    <div class="grid grid-cols-3 transition-all ease-in-out hover:scale-105  ">
+    <div class="grid grid-cols-3 transition-all ease-in-out bounce1 hover:scale-105  ">
       <div class="ml-4">  <Image  src={I} alt="I"/></div>
         <span class="col-span-2 text-[var(--secondary-color-100)] text-[22px] lg:text-[28px]">19. oktober, 2001</span>
     </div>
     
-    <div class="grid grid-cols-3 transition-all ease-in-out hover:scale-105">
+    <div class="grid grid-cols-3 transition-all ease-in-out bounce2 hover:scale-105">
         <div class="ml-2"><Image src={N} alt="N"/></div>
         <span class="col-span-2 text-[var(--secondary-color-100)] text-[22px] lg:text-[28px]">Ingrid Marievej 12,<br> 2500 Valby</span>
     </div>
     
-    <div class="grid grid-cols-3 transition-all ease-in-out hover:scale-105">
+    <div class="grid grid-cols-3 transition-all ease-in-out bounce3 hover:scale-105">
         <div class="ml-2"><Image src={F} alt="F"/></div>
         <span class="col-span-2 text-[var(--secondary-color-100)] text-[22px] lg:text-[28px]">L.backe19@gmail.com</span>
     </div>
     
-    <div class="grid grid-cols-3 transition-all ease-in-out hover:scale-105">
+    <div class="grid grid-cols-3 transition-all ease-in-out bounce4 hover:scale-105">
         <Image src={O} alt="O"/>
         <span class="col-span-2 text-[var(--secondary-color-100)] text-[22px]  lg:text-[28px]">+45 42 77 59 91</span>
     </div>
     
     </div>
+
+<script>
+    	import { inView } from "motion";
+
+    
+                const inviewelement1 = document.querySelector(".bounce1");
+            inView(
+            	inviewelement1 , () => {
+            		inviewelement1.classList.add("animate-animated", "animate__bounceIn", "animate__delay-1s")
+            	})
+                const inviewelement2 = document.querySelector(".bounce2");
+            inView(
+            	inviewelement2 , () => {
+            		inviewelement2.classList.add("animate-animated", "animate__bounceIn", "animate__delay-2s")
+            	})
+                const inviewelement3 = document.querySelector(".bounce3");
+            inView(
+            	inviewelement3 , () => {
+            		inviewelement3.classList.add("animate-animated", "animate__bounceIn", "animate__delay-3s")
+            	})
+                const inviewelement4 = document.querySelector(".bounce4");
+            inView(
+            	inviewelement4 , () => {
+            		inviewelement4.classList.add("animate-animated", "animate__bounceIn", "animate__delay-4s")
+            	})
+                
+</script>
