@@ -35,7 +35,7 @@ section h4 {
 }
 
 body {
-  cursor: url("/assets/i.svg"), auto;
+  cursor: url("/i.svg"), auto;
 }
 
 a,
