@@ -33,19 +33,19 @@ h2 {
 section h4 {
   font-weight: 600;
 }
-/* 
-body {
+
+/* body {
   cursor: url("/i.svg"), auto;
 }
 
 a,
 button,
 .clickable {
-  cursor: url("/assets/i2.svg"), pointer; /* Specifik markør for klikbare elementer 
-} 
+  cursor: url("/assets/i2.svg"), pointer;
+}
 .shadow {
   box-shadow: 153px 102px 52px 0px rgba(138, 138, 138, 0), 98px 65px 47px 0px rgba(138, 138, 138, 0.01), 55px 37px 40px 0px rgba(138, 138, 138, 0.05), 25px 16px 29px 0px rgba(138, 138, 138, 0.09), 6px 4px 16px 0px rgba(138, 138, 138, 0.1);
-}*/
+} */
 
 @media (min-width: 769px) {
   /* General classnames */
